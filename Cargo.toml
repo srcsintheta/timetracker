@@ -1,0 +1,13 @@
+# documentation at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name    = "timetracker"
+version = "0.1.0" # also hardcoded as const into main.rs
+edition = "2021"
+authors = ["src", "src@sintheta.dev"]
+
+[dependencies]
+chrono      = "0.4.31"
+directories = "5.0.1"
+regex		= "1.10.2"
+rusqlite    = { version = "0.30.0", features = ["bundled"] }
