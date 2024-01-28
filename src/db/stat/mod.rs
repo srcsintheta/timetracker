@@ -72,8 +72,6 @@ pub fn printstats(db : &Connection)
             );
     }
 
-    dbg!(&last5ddtot);
-
     // compute the total and avg values (for all activites in our vectors)
 
     // week
@@ -110,13 +108,9 @@ pub fn printstats(db : &Connection)
 
     if firstentry > sixdaysago
     {
-        dbg!("HEY");
         last5ddtotdivide = last5ddtotdivide -
             firstentry.signed_duration_since(sixdaysago).num_days() as f64;
     }
-
-    dbg!(firstentry);
-    dbg!(last5ddtotdivide);
 
     // last1wk
     let last1wktotalsum : f64 = last1wktot.iter().map(|(val,_)| val).sum();
