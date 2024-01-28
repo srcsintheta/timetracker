@@ -62,7 +62,7 @@ Options:
   (q)uit (back to main menu)
 
 Your option: a
-Enter activity name: GigHomepageForSusie	/* can contain spaces, np */
+Enter activity name: GigHomepageForSusie /* can contain spaces, np */
 Options:
 
   (a)dd new
@@ -225,9 +225,9 @@ a scheduler).
 
 Ideally this should never be needed. But maybe you kept the timer running,
 picked a wrong activity ID for a time that was entered into the database, et
-cetera. It's helpful to have the ability at least delete within the latest
+cetera. It's helpful to have the ability to at least delete within the latest
 entries. Supported are deletions for up to 7 days prior (8 days in total, today
-included)
+included).
 
 ```
 Your option: 3
@@ -272,24 +272,24 @@ Your option: 4
 Today:       8.00 (last 5 day avg: 9.73)
 
 Current week
- -> total   15.23	/* depends on current day of week */
- -> avg/d    7.12	/* same */
+ -> total   15.23
+ -> avg/d    7.12
 Last week
  -> total   62.65
  -> avg/d    8.89
-Last 6 weeks		/* can be less than 6 if not enough entries in db */
+Last 6 weeks		/* may be <6 if not enough entries in db */
  -> tot/w   56.54
  -> avg/d    8.07
 ---------------------------------------------------------------
-This month total:    132.57 	/* excludes current day */
-This month avg/day:   12.05		/* same */
+This month total:    132.57
+This month avg/day:   12.05
 ---------------------------------------------------------------
 Print detailed statistics per activity? (y/n): /* see next screen */
 ```
 
 I'm usually not interested in the exact split of my work time, but as stated
 before, especially if you add temporary activities for projects, gigs, then
-this data can be useful;
+this data can be useful:
 
 ```
 ---------------------------------------------------------------
@@ -323,8 +323,8 @@ Last 6 weeks
 Those statistics are a bit of interesting fun if you've used the program
 diligently for a while.
 
-If you only have data for the current year, it'll only you you statistics on
-the current year:
+If you only have data for the current year, it'll only show you you statistics
+on the current year:
 
 ```
 /* main menu */
@@ -482,9 +482,9 @@ Your option: 1
 
 ---------------------------------------------------------------
 ID	Name
-1	Main Job
+1   Main Job
 2   Weekend Project
-3	Susie's Homepage
+3   Susie's Homepage
 ---------------------------------------------------------------
 Enter one of the listed activity IDs
   'q' to go back to main
@@ -515,14 +515,16 @@ usr@machine ~/g/w/timetracker/debug (master)> /* back in my console */
 
 Note: There's no special shutdown routine or anything, so from the main menu
 you can just as easily quit with `Ctrl-C` on Linux and it won't have any
-negative consequences. It's perfectly fine (I do it myself)
+negative consequences. It's perfectly fine (I do it myself):
 
 ```
 Your option: ^C⏎                                                                                
-sr@srdk ~/g/w/timetracker (master) [SIGINT]>
+usr@machine ~/g/w/timetracker (master) [SIGINT]>
 ```
 
 ## Download, build, run
+
+Grab the code from [github.com/srcsinthheta](https://github.com/srcsintheta/timetracker)
 
 Ideally you have Cargo and Rust installed on your system. Simply download the
 source code and within the directory:
@@ -531,8 +533,9 @@ source code and within the directory:
 $ ~/git/timetracker (master)> cargo run
 ```
 
-builds and runs the project; the binary is under `target/debug/timetracker`;
-copy or symlink to it it freely to/from anywhere on your system
+This builds and runs the project; the binary is under
+`target/debug/timetracker`; copy or symlink to it it freely to/from anywhere on
+your system.
 
 ## Details of time handling
 
@@ -603,8 +606,6 @@ the day isn't finished until it's over.
 
 For daily statistics specifically, your current day is always excluded (since
 it hasn't finished yet). Of course once the day is past, it's part of the
-Code und Kommentierung müssen dann Hand in Hand auch synchron sein
-59m
 statistics as expected.
 
 #### weekly statistics
@@ -655,8 +656,9 @@ functionality, of course, but in the end it's a tool for me to use, and I've
 got more than enough interesting things to do.
 
 When my needs change, there's no telling where I could take this... if I
-diverge greatly from what it is now I might just create a new project though
+diverge greatly from what it is now I might just create a new project though.
 
 ## Feedback
 
 It's welcome, for ways to reach me see [sintheta.dev](https://sintheta.dev)
+
